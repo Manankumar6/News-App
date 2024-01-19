@@ -6,7 +6,10 @@ export class NewItem extends Component {
         return (
             <div>
                 <div className="card" style={{ width: "18rem" }}>
-                <span className="position-absolute top-0  translate-middle badge rounded-pill bg-danger" style={{left:"90%",zIndex:"1"}} >{source?source:"unkown"}</span>
+                    <div style={{display:'flex', justifyContent:'flex-end',position:'absolute', right:'0'}}>
+                        
+                <span className="badge rounded-pill bg-danger" style={{left:"90%",zIndex:"1"}} >{source?source:"unkown"}</span>
+                    </div>
                     <img src={!imageUrl ? "https://www.nasa.gov/wp-content/uploads/2024/01/gateway-airlock-photo.png" : imageUrl} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title"> {title} 
